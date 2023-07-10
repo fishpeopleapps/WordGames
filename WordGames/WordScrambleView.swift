@@ -6,16 +6,17 @@
 //
 // TODO: Move some of the logic out
 // TODO: Add code comments
-// TODO: disallow answers shorther than three letters and give them an alert if they try to submit it
-// TODO: make it so the cursor automatically goes to the text field after a submit?
 // TODO: Make the UI pretty
-// TODO: Add a way for the user to go to the next word (startGame()) when they are ready to move on
 // TODO: I could make this timed?
-// TODO: Turn auto correct OFF (it's defaulted to on and kind of makes it easier to cheat
+// TODO: Add a success sound if they ___? get a word? reach a point goal?
+// TODO: Get rid of the enum
 
 import SwiftUI
 
 struct WordScrambleView: View {
+    enum FocusedField {
+        case nextWord
+    }
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
@@ -23,13 +24,17 @@ struct WordScrambleView: View {
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
+    @FocusState private var focusedField: FocusedField?
     var body: some View {
         NavigationView {
             List {
                 Text("Your Score: \(userScore)")
                 Section {
+                 //   TextField("Enter your word", text: $newWord)
                     TextField("Enter your word", text: $newWord)
                         .autocapitalization(.none)
+                        .autocorrectionDisabled()
+                        .focused($focusedField, equals: .nextWord)
                 }
                 Section {
                     ForEach(usedWords, id: \.self) { word in
@@ -45,9 +50,19 @@ struct WordScrambleView: View {
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
             .alert(errorTitle, isPresented: $showingError) {
-                Button("Ok", role: .cancel) { }
+                Button("Ok", role: .cancel) { focusedField = .nextWord }
             } message: {
                 Text(errorMessage)
+            }
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button {
+                        startGame()
+                    } label: {
+                        Image(systemName: "arrow.right.circle.fill")
+                            .foregroundStyle(.gray)
+                    }
+                }
             }
         }
     }
@@ -56,20 +71,22 @@ struct WordScrambleView: View {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         // check it has at least one character
         // give the person a message saying their attempt has to be longer
-        guard answer.count > 3 else { return }
+        guard answer.count > 2 else { return }
         // more validation
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
             return
         }
-
+        guard isReal(word: answer) else {
+            wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
+            return
+        }
         guard isPossible(word: answer) else {
             wordError(title: "Word not possible", message: "You can't spell that word from '\(rootWord)'!")
             return
         }
-
-        guard isReal(word: answer) else {
-            wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
+        guard isLongEnough(word: answer) else {
+            wordError(title: "Word too short", message: "Shoot for 3 letter words or higher, you got this!")
             return
         }
         // insert word at position 0 in used words array
@@ -79,7 +96,10 @@ struct WordScrambleView: View {
         // increase userScore
         increaseScore()
         // set newWord to be an empty string
+       // newWord = ""
         newWord = ""
+        // refocus the view to the textfield
+        focusedField = .nextWord
     }
     func increaseScore() {
         let wordScore = newWord.count
@@ -94,10 +114,19 @@ struct WordScrambleView: View {
                 let allWords = startWords.components(separatedBy: "\n")
                 // give us a random element
                 rootWord = allWords.randomElement() ?? "silkworm"
+                // move the focus to the textfield
+                focusedField = .nextWord
+                usedWords = []
                 return
             }
         }
         fatalError("Could not load start.txt from bundle")
+    }
+    func isLongEnough(word: String) -> Bool {
+        if newWord.count < 3 {
+            return false
+        }
+        return true
     }
     func isOriginal(word: String) -> Bool {
         !usedWords.contains(word)
