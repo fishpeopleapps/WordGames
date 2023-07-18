@@ -14,7 +14,12 @@ struct ContentView: View {
                 .tabItem {
                     Label("Scramble", systemImage: "circle.hexagonpath")
                 }
+            CategoriesView()
+                .tabItem {
+                    Label("7Words", systemImage: "circle.hexagongrid.circle.fill")
+                }
         }
+        .tint(.black)
     }
 }
 

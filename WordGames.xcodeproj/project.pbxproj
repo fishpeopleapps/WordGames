@@ -7,6 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8130686B2A66E12C002E6495 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130686A2A66E12C002E6495 /* Category.swift */; };
+		8130686E2A66E349002E6495 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130686D2A66E349002E6495 /* Word.swift */; };
+		813068702A66E69E002E6495 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130686F2A66E69E002E6495 /* Answer.swift */; };
+		813068722A66E73E002E6495 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813068712A66E73E002E6495 /* Segment.swift */; };
+		813068752A66E8B2002E6495 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813068742A66E8B2002E6495 /* LevelViewModel.swift */; };
+		813068782A66F609002E6495 /* Monoton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 813068772A66F609002E6495 /* Monoton-Regular.ttf */; };
+		8130687E2A6711C9002E6495 /* SwiftyWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130687D2A6711C9002E6495 /* SwiftyWordsView.swift */; };
+		813068802A67184F002E6495 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130687F2A67184F002E6495 /* SegmentView.swift */; };
+		813068822A671A34002E6495 /* SwiftyGuessText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813068812A671A34002E6495 /* SwiftyGuessText.swift */; };
+		813068842A671C88002E6495 /* LevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813068832A671C88002E6495 /* LevelsView.swift */; };
+		813068872A671E3C002E6495 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813068862A671E3C002E6495 /* CategoriesView.swift */; };
+		813A82F62A61F77B0023066F /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813A82DF2A61F77B0023066F /* Bundle-Decodable.swift */; };
+		813A82F72A61F77B0023066F /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82E12A61F77B0023066F /* Categories.json */; };
+		813A82F82A61F77B0023066F /* Music.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82E22A61F77B0023066F /* Music.json */; };
+		813A82F92A61F77B0023066F /* Hobbies.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82E32A61F77B0023066F /* Hobbies.json */; };
+		813A82FA2A61F77B0023066F /* Plants.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82E42A61F77B0023066F /* Plants.json */; };
+		813A82FB2A61F77B0023066F /* VideoGames.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82E52A61F77B0023066F /* VideoGames.json */; };
+		813A82FC2A61F77B0023066F /* Places.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82E62A61F77B0023066F /* Places.json */; };
+		813A82FD2A61F77B0023066F /* Random.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82E72A61F77B0023066F /* Random.json */; };
+		813A82FE2A61F77B0023066F /* SciFiFantasy.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82E82A61F77B0023066F /* SciFiFantasy.json */; };
+		813A82FF2A61F77B0023066F /* Weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82E92A61F77B0023066F /* Weather.json */; };
+		813A83002A61F77B0023066F /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82EA2A61F77B0023066F /* Animals.json */; };
+		813A83012A61F77B0023066F /* MoviesAndTV.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82EB2A61F77B0023066F /* MoviesAndTV.json */; };
+		813A83022A61F77B0023066F /* Sports.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82EC2A61F77B0023066F /* Sports.json */; };
+		813A83032A61F77B0023066F /* Computers.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82ED2A61F77B0023066F /* Computers.json */; };
+		813A83042A61F77B0023066F /* Foods.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82EE2A61F77B0023066F /* Foods.json */; };
+		813A83052A61F77B0023066F /* Brands.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82EF2A61F77B0023066F /* Brands.json */; };
+		813A83062A61F77B0023066F /* Pokemon.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82F02A61F77B0023066F /* Pokemon.json */; };
+		813A83072A61F77B0023066F /* People.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82F12A61F77B0023066F /* People.json */; };
+		813A83082A61F77B0023066F /* School.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82F22A61F77B0023066F /* School.json */; };
+		813A83092A61F77B0023066F /* Celebrities.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82F32A61F77B0023066F /* Celebrities.json */; };
+		813A830A2A61F77B0023066F /* Manga.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82F42A61F77B0023066F /* Manga.json */; };
+		813A830B2A61F77B0023066F /* Science.json in Resources */ = {isa = PBXBuildFile; fileRef = 813A82F52A61F77B0023066F /* Science.json */; };
 		81E0BE122A58ACBB00406472 /* WordGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BE112A58ACBB00406472 /* WordGamesApp.swift */; };
 		81E0BE142A58ACBB00406472 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BE132A58ACBB00406472 /* ContentView.swift */; };
 		81E0BE162A58ACBC00406472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E0BE152A58ACBC00406472 /* Assets.xcassets */; };
@@ -16,6 +49,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8130686A2A66E12C002E6495 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		8130686D2A66E349002E6495 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		8130686F2A66E69E002E6495 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		813068712A66E73E002E6495 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
+		813068742A66E8B2002E6495 /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
+		813068772A66F609002E6495 /* Monoton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Monoton-Regular.ttf"; sourceTree = "<group>"; };
+		8130687A2A66F64D002E6495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8130687D2A6711C9002E6495 /* SwiftyWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyWordsView.swift; sourceTree = "<group>"; };
+		8130687F2A67184F002E6495 /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
+		813068812A671A34002E6495 /* SwiftyGuessText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyGuessText.swift; sourceTree = "<group>"; };
+		813068832A671C88002E6495 /* LevelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsView.swift; sourceTree = "<group>"; };
+		813068862A671E3C002E6495 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		813A82DF2A61F77B0023066F /* Bundle-Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		813A82E12A61F77B0023066F /* Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
+		813A82E22A61F77B0023066F /* Music.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Music.json; sourceTree = "<group>"; };
+		813A82E32A61F77B0023066F /* Hobbies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Hobbies.json; sourceTree = "<group>"; };
+		813A82E42A61F77B0023066F /* Plants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Plants.json; sourceTree = "<group>"; };
+		813A82E52A61F77B0023066F /* VideoGames.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VideoGames.json; sourceTree = "<group>"; };
+		813A82E62A61F77B0023066F /* Places.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Places.json; sourceTree = "<group>"; };
+		813A82E72A61F77B0023066F /* Random.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Random.json; sourceTree = "<group>"; };
+		813A82E82A61F77B0023066F /* SciFiFantasy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SciFiFantasy.json; sourceTree = "<group>"; };
+		813A82E92A61F77B0023066F /* Weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Weather.json; sourceTree = "<group>"; };
+		813A82EA2A61F77B0023066F /* Animals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animals.json; sourceTree = "<group>"; };
+		813A82EB2A61F77B0023066F /* MoviesAndTV.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MoviesAndTV.json; sourceTree = "<group>"; };
+		813A82EC2A61F77B0023066F /* Sports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sports.json; sourceTree = "<group>"; };
+		813A82ED2A61F77B0023066F /* Computers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Computers.json; sourceTree = "<group>"; };
+		813A82EE2A61F77B0023066F /* Foods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Foods.json; sourceTree = "<group>"; };
+		813A82EF2A61F77B0023066F /* Brands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Brands.json; sourceTree = "<group>"; };
+		813A82F02A61F77B0023066F /* Pokemon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pokemon.json; sourceTree = "<group>"; };
+		813A82F12A61F77B0023066F /* People.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = People.json; sourceTree = "<group>"; };
+		813A82F22A61F77B0023066F /* School.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = School.json; sourceTree = "<group>"; };
+		813A82F32A61F77B0023066F /* Celebrities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Celebrities.json; sourceTree = "<group>"; };
+		813A82F42A61F77B0023066F /* Manga.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Manga.json; sourceTree = "<group>"; };
+		813A82F52A61F77B0023066F /* Science.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Science.json; sourceTree = "<group>"; };
 		81E0BE0E2A58ACBB00406472 /* WordGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E0BE112A58ACBB00406472 /* WordGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGamesApp.swift; sourceTree = "<group>"; };
 		81E0BE132A58ACBB00406472 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +103,101 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8130686C2A66E133002E6495 /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				8130686A2A66E12C002E6495 /* Category.swift */,
+				8130686F2A66E69E002E6495 /* Answer.swift */,
+				813068712A66E73E002E6495 /* Segment.swift */,
+				8130686D2A66E349002E6495 /* Word.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		813068732A66E808002E6495 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				813A82DF2A61F77B0023066F /* Bundle-Decodable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		813068762A66E8B8002E6495 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				813068742A66E8B2002E6495 /* LevelViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		813068792A66F60C002E6495 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				813068772A66F609002E6495 /* Monoton-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8130687B2A66F6CE002E6495 /* Swifty Words */ = {
+			isa = PBXGroup;
+			children = (
+				813A82E02A61F77B0023066F /* JSON */,
+				8130686C2A66E133002E6495 /* DataTypes */,
+				813068762A66E8B8002E6495 /* ViewModel */,
+				8130687D2A6711C9002E6495 /* SwiftyWordsView.swift */,
+				813068862A671E3C002E6495 /* CategoriesView.swift */,
+				813068832A671C88002E6495 /* LevelsView.swift */,
+				813068852A671D7E002E6495 /* Components */,
+			);
+			path = "Swifty Words";
+			sourceTree = "<group>";
+		};
+		8130687C2A66F6F2002E6495 /* Word Scramble */ = {
+			isa = PBXGroup;
+			children = (
+				81E0BE222A5A04EB00406472 /* start.txt */,
+				81E0BE1F2A58AD3600406472 /* WordScrambleView.swift */,
+			);
+			path = "Word Scramble";
+			sourceTree = "<group>";
+		};
+		813068852A671D7E002E6495 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				813068812A671A34002E6495 /* SwiftyGuessText.swift */,
+				8130687F2A67184F002E6495 /* SegmentView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		813A82E02A61F77B0023066F /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				813A82E12A61F77B0023066F /* Categories.json */,
+				813A82E22A61F77B0023066F /* Music.json */,
+				813A82E32A61F77B0023066F /* Hobbies.json */,
+				813A82E42A61F77B0023066F /* Plants.json */,
+				813A82E52A61F77B0023066F /* VideoGames.json */,
+				813A82E62A61F77B0023066F /* Places.json */,
+				813A82E72A61F77B0023066F /* Random.json */,
+				813A82E82A61F77B0023066F /* SciFiFantasy.json */,
+				813A82E92A61F77B0023066F /* Weather.json */,
+				813A82EA2A61F77B0023066F /* Animals.json */,
+				813A82EB2A61F77B0023066F /* MoviesAndTV.json */,
+				813A82EC2A61F77B0023066F /* Sports.json */,
+				813A82ED2A61F77B0023066F /* Computers.json */,
+				813A82EE2A61F77B0023066F /* Foods.json */,
+				813A82EF2A61F77B0023066F /* Brands.json */,
+				813A82F02A61F77B0023066F /* Pokemon.json */,
+				813A82F12A61F77B0023066F /* People.json */,
+				813A82F22A61F77B0023066F /* School.json */,
+				813A82F32A61F77B0023066F /* Celebrities.json */,
+				813A82F42A61F77B0023066F /* Manga.json */,
+				813A82F52A61F77B0023066F /* Science.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		81E0BE052A58ACBB00406472 = {
 			isa = PBXGroup;
 			children = (
@@ -55,12 +217,15 @@
 		81E0BE102A58ACBB00406472 /* WordGames */ = {
 			isa = PBXGroup;
 			children = (
+				81E0BE152A58ACBC00406472 /* Assets.xcassets */,
+				8130687A2A66F64D002E6495 /* Info.plist */,
 				81E0BE112A58ACBB00406472 /* WordGamesApp.swift */,
 				81E0BE132A58ACBB00406472 /* ContentView.swift */,
-				81E0BE1F2A58AD3600406472 /* WordScrambleView.swift */,
-				81E0BE222A5A04EB00406472 /* start.txt */,
-				81E0BE152A58ACBC00406472 /* Assets.xcassets */,
+				813068732A66E808002E6495 /* Extensions */,
+				813068792A66F60C002E6495 /* Fonts */,
 				81E0BE172A58ACBC00406472 /* Preview Content */,
+				8130687C2A66F6F2002E6495 /* Word Scramble */,
+				8130687B2A66F6CE002E6495 /* Swifty Words */,
 			);
 			path = WordGames;
 			sourceTree = "<group>";
@@ -132,8 +297,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813A82FE2A61F77B0023066F /* SciFiFantasy.json in Resources */,
+				813A83042A61F77B0023066F /* Foods.json in Resources */,
+				813A83082A61F77B0023066F /* School.json in Resources */,
+				813A830A2A61F77B0023066F /* Manga.json in Resources */,
+				813A82FC2A61F77B0023066F /* Places.json in Resources */,
 				81E0BE192A58ACBC00406472 /* Preview Assets.xcassets in Resources */,
+				813A82F72A61F77B0023066F /* Categories.json in Resources */,
+				813A82FF2A61F77B0023066F /* Weather.json in Resources */,
+				813A82F82A61F77B0023066F /* Music.json in Resources */,
+				813A83062A61F77B0023066F /* Pokemon.json in Resources */,
+				813A83012A61F77B0023066F /* MoviesAndTV.json in Resources */,
+				813A82FD2A61F77B0023066F /* Random.json in Resources */,
+				813A83032A61F77B0023066F /* Computers.json in Resources */,
+				813A82FB2A61F77B0023066F /* VideoGames.json in Resources */,
+				813A83092A61F77B0023066F /* Celebrities.json in Resources */,
+				813A83072A61F77B0023066F /* People.json in Resources */,
+				813068782A66F609002E6495 /* Monoton-Regular.ttf in Resources */,
 				81E0BE232A5A04EB00406472 /* start.txt in Resources */,
+				813A82FA2A61F77B0023066F /* Plants.json in Resources */,
+				813A83052A61F77B0023066F /* Brands.json in Resources */,
+				813A83002A61F77B0023066F /* Animals.json in Resources */,
+				813A82F92A61F77B0023066F /* Hobbies.json in Resources */,
+				813A83022A61F77B0023066F /* Sports.json in Resources */,
+				813A830B2A61F77B0023066F /* Science.json in Resources */,
 				81E0BE162A58ACBC00406472 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,9 +354,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8130687E2A6711C9002E6495 /* SwiftyWordsView.swift in Sources */,
 				81E0BE142A58ACBB00406472 /* ContentView.swift in Sources */,
+				813068822A671A34002E6495 /* SwiftyGuessText.swift in Sources */,
+				8130686B2A66E12C002E6495 /* Category.swift in Sources */,
+				813068802A67184F002E6495 /* SegmentView.swift in Sources */,
 				81E0BE122A58ACBB00406472 /* WordGamesApp.swift in Sources */,
+				813068842A671C88002E6495 /* LevelsView.swift in Sources */,
+				813068752A66E8B2002E6495 /* LevelViewModel.swift in Sources */,
+				813068872A671E3C002E6495 /* CategoriesView.swift in Sources */,
+				813068722A66E73E002E6495 /* Segment.swift in Sources */,
+				813068702A66E69E002E6495 /* Answer.swift in Sources */,
 				81E0BE202A58AD3600406472 /* WordScrambleView.swift in Sources */,
+				813A82F62A61F77B0023066F /* Bundle-Decodable.swift in Sources */,
+				8130686E2A66E349002E6495 /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +499,7 @@
 				DEVELOPMENT_TEAM = HJ5KH98N5D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WordGames/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -330,6 +529,7 @@
 				DEVELOPMENT_TEAM = HJ5KH98N5D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WordGames/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

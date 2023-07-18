@@ -4,53 +4,71 @@
 //
 //  Created by KBrewer on 7/7/23.
 //
-// TODO: Move some of the logic out
-// TODO: Add code comments
-// TODO: Make the UI pretty
-// TODO: I could make this timed?
-// TODO: Add a success sound if they ___? get a word? reach a point goal?
-// TODO: Get rid of the enum
+// TODO: Move Logic Out
 
 import SwiftUI
 
 struct WordScrambleView: View {
-    enum FocusedField {
-        case nextWord
-    }
+    @FocusState private var isFocused: Bool
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    /// UserScore related state variables, one to hold score, one to change size
     @State private var userScore = 0
+    @State private var scoreSize = 16
+    /// Incorrect guesses will produce an alert with custom title/message
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
-    @FocusState private var focusedField: FocusedField?
     var body: some View {
         NavigationView {
             List {
-                Text("Your Score: \(userScore)")
+                /// Section that contains the rootWord with custom text
                 Section {
-                 //   TextField("Enter your word", text: $newWord)
+                    Text(rootWord)
+                        .font(.custom("Monoton", size: 45))
+                        .textCase(.uppercase)
+                        .foregroundStyle(Color.white)
+                        .frame(width: 500)
+                }
+                .listRowBackground(Color("Dragonfruit"))
+                /// Section that contains the user score
+                Section {
+                    Text("Your Score: \(userScore)")
+                        .frame(maxWidth: .infinity).bold().kerning(1.5)
+                        .foregroundStyle(Color("Plum"))
+                        .font(.custom("Helvetica", size: CGFloat(scoreSize)))
+                }
+                .listRowBackground(Color("Kiwi"))
+                /// Section that contains the textField for users to enter their words
+                Section {
                     TextField("Enter your word", text: $newWord)
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
-                        .focused($focusedField, equals: .nextWord)
+                        .focused($isFocused)
                 }
+                /// Section that displays the user words that count
                 Section {
                     ForEach(usedWords, id: \.self) { word in
                         HStack {
                             Image(systemName: "\(word.count).circle")
                             Text(word)
                         }
-
+                    }
+                } header: {
+                    Text("Your Words")
+                } footer: {
+                    if usedWords.isEmpty {
+                        Text("It looks like you don't have any words yet")
                     }
                 }
             }
-            .navigationTitle(rootWord)
+            .scrollContentBackground(.hidden)
+            .background((Color("Kiwi")).edgesIgnoringSafeArea(.all))
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
             .alert(errorTitle, isPresented: $showingError) {
-                Button("Ok", role: .cancel) { focusedField = .nextWord }
+                Button("Ok", role: .cancel) { isFocused = true }
             } message: {
                 Text(errorMessage)
             }
@@ -60,19 +78,16 @@ struct WordScrambleView: View {
                         startGame()
                     } label: {
                         Image(systemName: "arrow.right.circle.fill")
-                            .foregroundStyle(.gray)
+                            .foregroundStyle(Color("Dragonfruit"))
                     }
                 }
             }
         }
     }
     func addNewWord() {
-        // lowercase the correct word string and remove whitespaces
+        /// lowercase the correct word string and remove whitespaces
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
-        // check it has at least one character
-        // give the person a message saying their attempt has to be longer
-        guard answer.count > 2 else { return }
-        // more validation
+        /// word validation
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
             return
@@ -89,62 +104,71 @@ struct WordScrambleView: View {
             wordError(title: "Word too short", message: "Shoot for 3 letter words or higher, you got this!")
             return
         }
-        // insert word at position 0 in used words array
+        /// insert word at position 0 in used words array so it appears at the top
         withAnimation {
             usedWords.insert(answer, at: 0)
         }
-        // increase userScore
+        /// Increase the user score, refocus the view onto the empty textField
         increaseScore()
-        // set newWord to be an empty string
-       // newWord = ""
         newWord = ""
-        // refocus the view to the textfield
-        focusedField = .nextWord
+        isFocused = true
     }
+    /// Increases the user score which is stored in AppStorage and is culminated from every word
     func increaseScore() {
         let wordScore = newWord.count
-        userScore += wordScore
+        withAnimation {
+            scoreSize = 20
+            userScore += wordScore
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                scoreSize = 16
+            }
+        }
     }
     func startGame() {
-        // If we have found start.txt in our app bundle, continue...
+        /// If we have found start.txt in our app bundle, continue...
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
-            // Load the file into startWords
+            /// Load the file into startWords
             if let startWords = try? String(contentsOf: startWordsURL) {
-                // split it on line breaks
+                /// split it on line breaks
                 let allWords = startWords.components(separatedBy: "\n")
-                // give us a random element
+                /// give us a random word
                 rootWord = allWords.randomElement() ?? "silkworm"
-                // move the focus to the textfield
-                focusedField = .nextWord
-                usedWords = []
+                /// move the focus to the textfield
+                isFocused = true
+                /// empty the usedWords array when starting a new word
+                usedWords.removeAll()
                 return
             }
         }
         fatalError("Could not load start.txt from bundle")
     }
+    /// Determines if the word is large enough to score (3 or more)
     func isLongEnough(word: String) -> Bool {
         if newWord.count < 3 {
             return false
         }
         return true
     }
+    /// Determines if the user has already used that particular word
     func isOriginal(word: String) -> Bool {
         !usedWords.contains(word)
     }
+    /// Determines if the user submitted word can be made from the root word
     func isPossible(word: String) -> Bool {
         var tempRootWord = rootWord
         for letter in word {
-            // where is the first place that letter exists
+            /// where is the first place that letter exists
             if let position = tempRootWord.firstIndex(of: letter) {
-                // if we found it, remove it so they can't reuse it
+                /// if we found it, remove it so they can't reuse it
                 tempRootWord.remove(at: position)
             } else {
-                // a letter wasn't found so return false
+                /// a letter wasn't found so return false
                 return false
             }
         }
         return true
     }
+    /// Determines if the word the user submits is an actual word
     func isReal(word: String) -> Bool {
         let checker = UITextChecker()
         let range = NSRange(location: 0, length: word.utf16.count)
