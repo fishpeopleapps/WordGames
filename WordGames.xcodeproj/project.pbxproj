@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812743B52A68932B008484A2 /* LetterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812743B42A68932B008484A2 /* LetterGridView.swift */; };
+		812743BA2A689430008484A2 /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812743B92A689430008484A2 /* LetterView.swift */; };
+		812743BC2A689583008484A2 /* WS-ViewModifier-Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812743BB2A689583008484A2 /* WS-ViewModifier-Fonts.swift */; };
 		8130686B2A66E12C002E6495 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130686A2A66E12C002E6495 /* Category.swift */; };
 		8130686E2A66E349002E6495 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130686D2A66E349002E6495 /* Word.swift */; };
 		813068702A66E69E002E6495 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130686F2A66E69E002E6495 /* Answer.swift */; };
@@ -49,6 +52,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		812743B42A68932B008484A2 /* LetterGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterGridView.swift; sourceTree = "<group>"; };
+		812743B92A689430008484A2 /* LetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterView.swift; sourceTree = "<group>"; };
+		812743BB2A689583008484A2 /* WS-ViewModifier-Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WS-ViewModifier-Fonts.swift"; sourceTree = "<group>"; };
 		8130686A2A66E12C002E6495 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8130686D2A66E349002E6495 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		8130686F2A66E69E002E6495 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
@@ -103,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812743B82A689401008484A2 /* Boggle */ = {
+			isa = PBXGroup;
+			children = (
+				812743B92A689430008484A2 /* LetterView.swift */,
+				812743B42A68932B008484A2 /* LetterGridView.swift */,
+			);
+			path = Boggle;
+			sourceTree = "<group>";
+		};
 		8130686C2A66E133002E6495 /* DataTypes */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +172,7 @@
 			children = (
 				81E0BE222A5A04EB00406472 /* start.txt */,
 				81E0BE1F2A58AD3600406472 /* WordScrambleView.swift */,
+				812743BB2A689583008484A2 /* WS-ViewModifier-Fonts.swift */,
 			);
 			path = "Word Scramble";
 			sourceTree = "<group>";
@@ -220,6 +236,7 @@
 				81E0BE152A58ACBC00406472 /* Assets.xcassets */,
 				8130687A2A66F64D002E6495 /* Info.plist */,
 				81E0BE112A58ACBB00406472 /* WordGamesApp.swift */,
+				812743B82A689401008484A2 /* Boggle */,
 				81E0BE132A58ACBB00406472 /* ContentView.swift */,
 				813068732A66E808002E6495 /* Extensions */,
 				813068792A66F60C002E6495 /* Fonts */,
@@ -360,13 +377,16 @@
 				8130686B2A66E12C002E6495 /* Category.swift in Sources */,
 				813068802A67184F002E6495 /* SegmentView.swift in Sources */,
 				81E0BE122A58ACBB00406472 /* WordGamesApp.swift in Sources */,
+				812743BA2A689430008484A2 /* LetterView.swift in Sources */,
 				813068842A671C88002E6495 /* LevelsView.swift in Sources */,
 				813068752A66E8B2002E6495 /* LevelViewModel.swift in Sources */,
+				812743B52A68932B008484A2 /* LetterGridView.swift in Sources */,
 				813068872A671E3C002E6495 /* CategoriesView.swift in Sources */,
 				813068722A66E73E002E6495 /* Segment.swift in Sources */,
 				813068702A66E69E002E6495 /* Answer.swift in Sources */,
 				81E0BE202A58AD3600406472 /* WordScrambleView.swift in Sources */,
 				813A82F62A61F77B0023066F /* Bundle-Decodable.swift in Sources */,
+				812743BC2A689583008484A2 /* WS-ViewModifier-Fonts.swift in Sources */,
 				8130686E2A66E349002E6495 /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

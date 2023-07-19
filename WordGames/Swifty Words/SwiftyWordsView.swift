@@ -7,6 +7,7 @@
 // TODO: Improve UI
 // TODO: Start at level 1 and automatically increase when the user finishes a level (remove levels view)
 // TODO: Refactor categoriesView so it makes sense in the tab view
+// TODO: More Comments
 
 import SwiftUI
 

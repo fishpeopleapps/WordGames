@@ -2,7 +2,7 @@
 //  WordScrambleView.swift
 //  WordGames
 //
-//  Created by KBrewer on 7/7/23.
+//  Created by Kimberly Brewer on 7/7/23.
 //
 // TODO: Move Logic Out
 
@@ -26,10 +26,7 @@ struct WordScrambleView: View {
                 /// Section that contains the rootWord with custom text
                 Section {
                     Text(rootWord)
-                        .font(.custom("Monoton", size: 45))
-                        .textCase(.uppercase)
-                        .foregroundStyle(Color.white)
-                        .frame(width: 500)
+                        .rootStyle()
                 }
                 .listRowBackground(Color("Dragonfruit"))
                 /// Section that contains the user score
@@ -37,7 +34,7 @@ struct WordScrambleView: View {
                     Text("Your Score: \(userScore)")
                         .frame(maxWidth: .infinity).bold().kerning(1.5)
                         .foregroundStyle(Color("Plum"))
-                        .font(.custom("Helvetica", size: CGFloat(scoreSize)))
+                        .font(.system(size: CGFloat(scoreSize)))
                 }
                 .listRowBackground(Color("Kiwi"))
                 /// Section that contains the textField for users to enter their words
