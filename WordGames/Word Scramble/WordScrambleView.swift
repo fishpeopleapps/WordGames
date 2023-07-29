@@ -20,6 +20,7 @@ struct WordScrambleView: View {
     @State private var errorTitle = ""
     @State private var errorMessage = ""
     @State private var showingError = false
+    /// View
     var body: some View {
         NavigationView {
             List {
@@ -59,6 +60,9 @@ struct WordScrambleView: View {
                         Text("It looks like you don't have any words yet")
                     }
                 }
+            }
+            .onTapGesture {
+                isFocused = false
             }
             .scrollContentBackground(.hidden)
             .background((Color("Kiwi")).edgesIgnoringSafeArea(.all))
@@ -178,6 +182,7 @@ struct WordScrambleView: View {
         )
         return misspelledRange.location == NSNotFound
     }
+    /// Sets up the error alert to show the appropriate error
     func wordError(title: String, message: String) {
         errorTitle = title
         errorMessage = message

@@ -10,6 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
+            BoggleView()
+                .tabItem {
+                    Label("Boggle", systemImage: "circle.hexagongrid")
+                }
             WordScrambleView()
                 .tabItem {
                     Label("Scramble", systemImage: "circle.hexagonpath")
