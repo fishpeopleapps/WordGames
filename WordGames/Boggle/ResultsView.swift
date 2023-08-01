@@ -14,7 +14,6 @@ struct ResultsView: View {
     var player1Score = 0
     var player2Score = 0
     var result: String
-    
     var body: some View {
         NavigationStack {
             List {
@@ -49,4 +48,3 @@ struct ResultsView: View {
         }
     }
 }
-

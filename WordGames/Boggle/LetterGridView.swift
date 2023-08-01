@@ -9,9 +9,9 @@ import SwiftUI
 
 struct LetterGridView: View {
     @ObservedObject var player: Player
+    @State private var message: String?
     var game: GameBrain
     var columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    @State private var message: String? 
     var body: some View {
         ZStack {
             LazyVGrid(columns: columns) {

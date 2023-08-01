@@ -51,6 +51,10 @@
 		81554DC52A74038700D75B23 /* String-Scoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81554DC42A74038700D75B23 /* String-Scoring.swift */; };
 		81554DC72A7403EC00D75B23 /* PlayerResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81554DC62A7403EC00D75B23 /* PlayerResultsView.swift */; };
 		81554DC92A74048100D75B23 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81554DC82A74048000D75B23 /* ResultsView.swift */; };
+		81C456762A7944C000CAC39A /* QuickSpellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C456752A7944C000CAC39A /* QuickSpellView.swift */; };
+		81C456782A79457100CAC39A /* QSLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C456772A79457100CAC39A /* QSLetter.swift */; };
+		81C4567D2A79496800CAC39A /* QSLetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C4567C2A79496800CAC39A /* QSLetterView.swift */; };
+		81C4567F2A796D6100CAC39A /* AnimatingNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C4567E2A796D6100CAC39A /* AnimatingNumView.swift */; };
 		81E0BE122A58ACBB00406472 /* WordGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BE112A58ACBB00406472 /* WordGamesApp.swift */; };
 		81E0BE142A58ACBB00406472 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BE132A58ACBB00406472 /* ContentView.swift */; };
 		81E0BE162A58ACBC00406472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E0BE152A58ACBC00406472 /* Assets.xcassets */; };
@@ -105,6 +109,10 @@
 		81554DC42A74038700D75B23 /* String-Scoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Scoring.swift"; sourceTree = "<group>"; };
 		81554DC62A7403EC00D75B23 /* PlayerResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerResultsView.swift; sourceTree = "<group>"; };
 		81554DC82A74048000D75B23 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		81C456752A7944C000CAC39A /* QuickSpellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSpellView.swift; sourceTree = "<group>"; };
+		81C456772A79457100CAC39A /* QSLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSLetter.swift; sourceTree = "<group>"; };
+		81C4567C2A79496800CAC39A /* QSLetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSLetterView.swift; sourceTree = "<group>"; };
+		81C4567E2A796D6100CAC39A /* AnimatingNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingNumView.swift; sourceTree = "<group>"; };
 		81E0BE0E2A58ACBB00406472 /* WordGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E0BE112A58ACBB00406472 /* WordGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGamesApp.swift; sourceTree = "<group>"; };
 		81E0BE132A58ACBB00406472 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,9 +136,9 @@
 		812743B82A689401008484A2 /* Boggle */ = {
 			isa = PBXGroup;
 			children = (
+				81554DC82A74048000D75B23 /* ResultsView.swift */,
 				812743B92A689430008484A2 /* LetterView.swift */,
 				812743B42A68932B008484A2 /* LetterGridView.swift */,
-				81554DC22A72F69000D75B23 /* Dictionary.swift */,
 				812743BF2A689AC8008484A2 /* Player.swift */,
 				812743C12A689CE8008484A2 /* GameBrain.swift */,
 				81554DC42A74038700D75B23 /* String-Scoring.swift */,
@@ -244,10 +252,29 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		81C456792A79472100CAC39A /* QuickSpell */ = {
+			isa = PBXGroup;
+			children = (
+				81C4567E2A796D6100CAC39A /* AnimatingNumView.swift */,
+				81C456752A7944C000CAC39A /* QuickSpellView.swift */,
+				81C4567C2A79496800CAC39A /* QSLetterView.swift */,
+				81C456772A79457100CAC39A /* QSLetter.swift */,
+			);
+			path = QuickSpell;
+			sourceTree = "<group>";
+		};
+		81C456802A79730900CAC39A /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				81554DC02A72F60B00D75B23 /* dictionary.txt */,
+				81554DC22A72F69000D75B23 /* Dictionary.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
 		81E0BE052A58ACBB00406472 = {
 			isa = PBXGroup;
 			children = (
-				81554DC82A74048000D75B23 /* ResultsView.swift */,
 				81E0BE102A58ACBB00406472 /* WordGames */,
 				81E0BE0F2A58ACBB00406472 /* Products */,
 			);
@@ -268,7 +295,8 @@
 				8130687A2A66F64D002E6495 /* Info.plist */,
 				81E0BE112A58ACBB00406472 /* WordGamesApp.swift */,
 				81E0BE132A58ACBB00406472 /* ContentView.swift */,
-				81554DC02A72F60B00D75B23 /* dictionary.txt */,
+				81C456792A79472100CAC39A /* QuickSpell */,
+				81C456802A79730900CAC39A /* Dictionary */,
 				812743B82A689401008484A2 /* Boggle */,
 				813068732A66E808002E6495 /* Extensions */,
 				813068792A66F60C002E6495 /* Fonts */,
@@ -415,12 +443,16 @@
 				812743BA2A689430008484A2 /* LetterView.swift in Sources */,
 				813068842A671C88002E6495 /* LevelsView.swift in Sources */,
 				81554DC72A7403EC00D75B23 /* PlayerResultsView.swift in Sources */,
+				81C456762A7944C000CAC39A /* QuickSpellView.swift in Sources */,
 				813068752A66E8B2002E6495 /* LevelViewModel.swift in Sources */,
 				812743B52A68932B008484A2 /* LetterGridView.swift in Sources */,
 				81554DC32A72F69000D75B23 /* Dictionary.swift in Sources */,
+				81C456782A79457100CAC39A /* QSLetter.swift in Sources */,
+				81C4567F2A796D6100CAC39A /* AnimatingNumView.swift in Sources */,
 				813068872A671E3C002E6495 /* CategoriesView.swift in Sources */,
 				813068722A66E73E002E6495 /* Segment.swift in Sources */,
 				81554DC52A74038700D75B23 /* String-Scoring.swift in Sources */,
+				81C4567D2A79496800CAC39A /* QSLetterView.swift in Sources */,
 				813068702A66E69E002E6495 /* Answer.swift in Sources */,
 				81E0BE202A58AD3600406472 /* WordScrambleView.swift in Sources */,
 				813A82F62A61F77B0023066F /* Bundle-Decodable.swift in Sources */,
