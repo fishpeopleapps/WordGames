@@ -83,7 +83,7 @@ struct QuickSpellView: View {
                     Spacer()
                 }
             }
-            .padding()
+            .frame(maxHeight: .infinity)
         }
         .background(.blue.gradient) // what!?!?!?
         .ignoresSafeArea()
